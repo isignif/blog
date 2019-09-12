@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Mentions légales
 permalink: /legal/
 ---

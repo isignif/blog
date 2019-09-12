@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Foire aux questions
 permalink: /faq/
 ---

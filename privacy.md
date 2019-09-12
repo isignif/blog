@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Charte du respect de la Vie Privée
 permalink: /privacypolicy/
 ---
