@@ -7,7 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
-  <title>Hello, world!</title>
+  {% if page.title %}
+  <title>{{ page.title }}</title>
+  {% else %}
+  <title>iSignif</title>
+  {% endif %}
 </head>
 
 <body>
