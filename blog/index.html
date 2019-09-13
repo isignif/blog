@@ -2,27 +2,23 @@
 layout: default
 title: Blog
 ---
-<h1>Blog</h1>
-
 <div class="row">
   {% for post in paginator.posts %}
-    <div class="col-sm-6">
-      <article class="card border-light mb-4">
-        {% if post.thumbnail %}
-          <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="card-img-top">
-        {% endif %}
-        <div class="card-body">
-          <h3 class="card-title">{{ post.title }}</h3>
-          <p class="card-text text-justify">{{ post.excerpt | strip_html | strip_newlines | truncate: 256 }} ... </p>
-          <a class="card-link" href="{{ post.url | prepend: site.baseurl }}">voir plus</a>
-        </div>
-        <!-- <p><small>{{ post.date | date: "%d/%m/%Y" }}</small></p> -->
-      </article>
-    </div>
+  <div class="col-sm-6">
+    <article class="card border-light mb-4">
+      {% if post.thumbnail %}
+      <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="card-img-top">
+      {% endif %}
+      <div class="card-body">
+        <h3 class="card-title">{{ post.title }}</h3>
+        <p class="card-text text-justify">{{ post.excerpt | strip_html | strip_newlines | truncate: 256 }} ... </p>
+        <a class="card-link" href="{{ post.url | prepend: site.baseurl }}">voir plus</a>
+      </div>
+      <!-- <p><small>{{ post.date | date: "%d/%m/%Y" }}</small></p> -->
+    </article>
+  </div>
   {% endfor %}
 </div>
-
-
 
 <!-- Pagination links -->
 <nav>
@@ -38,29 +34,30 @@ title: Blog
     {% endif %}
 
     {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">{{ page }}</a>
-        </li>
-      {% elsif page == 1 %}
-        <li class="page-item">
-          <a class="page-link" href="{{ paginator.previous_page_path | relative_url | prepend: site.baseurl }}">{{ page }}</a>
-        </li>
-      {% else %}
-        <li class="page-item">
-          <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-        </li>
-      {% endif %}
+    {% if page == paginator.page %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">{{ page }}</a>
+    </li>
+    {% elsif page == 1 %}
+    <li class="page-item">
+      <a class="page-link"
+        href="{{ paginator.previous_page_path | relative_url | prepend: site.baseurl }}">{{ page }}</a>
+    </li>
+    {% else %}
+    <li class="page-item">
+      <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    </li>
+    {% endif %}
     {% endfor %}
 
     {% if paginator.next_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&raquo;</a>
-      </li>
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}">&raquo;</a>
+    </li>
     {% else %}
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&raquo;</a>
-      </li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&raquo;</a>
+    </li>
     {% endif %}
   </ul>
 </nav>
