@@ -3,15 +3,15 @@ layout: default
 title: API
 ---
 
-Vous êtes développeur et vous souaitez utiliser notre [API][api] pour automatiser la signification de vos demandes? Isignif met à disposition une [API RESTful][rest] qui vous permet de faire vos demandes sans quitter votre application.
+Vous êtes développeur et vous souhaitez utiliser notre [API][api] pour automatiser la signification de vos demandes? Isignif met à disposition une [API RESTful][rest] qui vous permet de faire vos demandes sans quitter votre application.
 
-Notre [API][api] est documentée au format [OpenAPI][openapi] et disponnible en ligne:
+Notre [API][api] est documentée au format [OpenAPI][openapi] et disponible en ligne:
 
 <p class="text-center">
     <a class="btn btn-primary btn-lg" href="https://github.com/isignif/openapi-definition">consulter la documentation OpenAPI</a>
 </p>
 
-Nous mettons à disposition un environnement de test disponible à l'address suivantes: <https://test.isignif.fr>
+Nous mettons à disposition un environnement de test disponible à l'addresse suivante: <https://test.isignif.fr>
 
 ## Sommaire
 
@@ -23,14 +23,13 @@ Nous mettons à disposition un environnement de test disponible à l'address sui
 Afin de rendre cette API utilisable, nous avons respecté deux principales normes:
 
 - [API RESTful][rest] qui spécifie comment accéder et comment **interagir** avec des ressources
-- [JSON:API][jsonapi] qui définie l'orga
+- [JSON:API][jsonapi] qui définit l'organisation du document JSON
 
 ## Workflow d'un acte
 
 1. Création d'un acte
 2. Paramétrage & ajout de significations
 3. Confirmation de l'acte
-4. 
 
 ## Exemple d'une demande de création d'un acte
 
@@ -66,7 +65,7 @@ $ curl -X POST \
 
 A la suite de cette demande, vous allez recevoir un email de confirmation à l'adresse que vous avez renseignée.
 
-<p class="alert alert-warning">Tant que l'addresse n'est pas confirmée, vous ne pouvez pas recevoir de jetons.</p>
+<p class="alert alert-warning">Tant que l'adresse n'est pas confirmée, vous ne pouvez pas recevoir de jetons.</p>
 
 Il suffit maintenant d'obtenir un jeton d'authentification en utilisant la ressource _tokens_:
 
@@ -77,7 +76,7 @@ $ curl -X POST \
        https://test.isignif.fr/api/v1/tokens
 ~~~
 
-Vous obtenez une reponse de cette forme
+Vous obtenez une réponse de cette forme
 
 ~~~json
 {
@@ -85,9 +84,9 @@ Vous obtenez une reponse de cette forme
 }
 ~~~
 
-### Utiliser le token
+### Utiliser le jeton d'authentification
 
-Vous pouvez remarquer que le token est un [JWT][jwt]. Vous pouvez donc le décoder très facilement le décoder (à l'aide d'une librairie comme [jwt-decode](https://github.com/auth0/jwt-decode) par exemple) et extraire ses informations:
+Pour les lecteurs les plus avertis, vous pouvez remarquer que le jeton est de type [JWT][jwt]. Il est donc possible de  le décoder (à l'aide d'une librairie comme [jwt-decode](https://github.com/auth0/jwt-decode) par exemple) et d'extraire ses informations:
 
 ~~~json
 {
@@ -100,7 +99,7 @@ Vous pouvez remarquer que le token est un [JWT][jwt]. Vous pouvez donc le décod
 ~~~
 
 
-<p class="alert alert-info">Vous remarquez certainement la clef `exp` qui contient le _timestamp_ de la date d'expiration du jeton. Elle est de 24h à partir de la date de création du jeton. Passé cette date, il faudra en générer un autre.</p>
+Vous remarquez certainement la clef `exp` qui contient le _timestamp_ de la date d'expiration du jeton. Elle est de 24h à partir de la date de création du jeton. Passé cette date, il faudra en générer un autre.
 
 Utilisons donc le `user_id` récupéré dans le JWT pour consulter nos informations:
 
@@ -141,7 +140,7 @@ Et voilà.
 
 Maintenant que nous avons un jeton d'authentification nous pouvons effectuer une demande de signification. Cette demande est un **acte**.
 
-Un acte est lié à un **type d'acte** qui définit sont prix. Utilisons donc l'API afin de trouver quel type d'acte nous voulons signifier. Vous pouvez utiliser le paramètre `term` pour filtrer les résultats.
+Un acte est lié à un **type d'acte** qui définit son prix. Utilisons donc l'API afin de trouver quel type d'acte nous voulons signifier. Vous pouvez utiliser le paramètre `term` pour filtrer les résultats.
 
 Voici un exemple en cherchant "nantissement":
 
@@ -226,7 +225,7 @@ $ curl -X POST \
        https://test.isignif.fr/api/v1/acts/99/significations
 ~~~
 
-Vous pouvez consulter toutes les significations crées sur l'acte avec cette requête:
+Vous pouvez consulter toutes les significations créées sur l'acte avec cette requête:
 
 ~~~bash
 $ curl -H "Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjAsImVtYWlsIjoiaXNpZ25pZl9hcGlAZGlzcG9zdGFibGUuY29tIiwiZmlyc3RuYW1lIjoiQWxleGFuZHJlIiwibGFzdG5hbWUiOiJSb3Vzc2VhdSIsImV4cCI6MTU2OTg0NTk3MX0.rMqkGMN4Zr6WA7hTjxY8qUVPiNu2vYSLDP4k0EtpJ4A" \
@@ -269,7 +268,7 @@ $ curl -H "Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjAsImVtYWlsIjoia
 
 ### Confirmer notre acte
 
-Il est maintenant temps de confirmer notre acte. Cette action aura pour conséquence d'engager l'acte et de contacter toutes les huissiers sélectionnés pour les significations.
+Il est maintenant temps de confirmer notre acte. Cette action aura pour conséquence de valider l'acte et de contacter tous les huissiers sélectionnés pour les significations.
 
 ~~~bash
 $ curl -X POST \
