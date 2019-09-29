@@ -12,4 +12,4 @@ $ jekyll serve # or build
 
 ## About
 
-Illustration provided by [](https://undraw.co/) on [MIT license](https://undraw.co/license)
+Illustration provided by [Undraw](https://undraw.co/) on [MIT license](https://undraw.co/license)
