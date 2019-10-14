@@ -11,3 +11,17 @@ small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, l
 article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
   font-family: 'Quicksand', sans-serif;
 }
+
+/*----------------------------*/
+/*-----------TITLES-----------*/
+/*----------------------------*/
+
+h1{
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  line-height: 3.7rem;
+  font-weight: normal;
+  small{
+    font-weight: lighter;
+  }
+}
