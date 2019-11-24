@@ -3,7 +3,7 @@ layout: default
 title: API
 ---
 
-Vous êtes développeur et vous souhaitez utiliser notre [API][api] pour automatiser la signification de vos demandes? Isignif met à disposition une [API RESTful][rest] qui vous permet de faire vos demandes sans quitter votre application.
+Vous êtes développeur et vous souhaitez utiliser notre [API][api] pour automatiser la signification de vos demandes? iSignif met à disposition une [API RESTful][rest] qui vous permet de faire vos demandes sans quitter votre application.
 
 Notre [API][api] est documentée au format [OpenAPI][openapi] et disponible en ligne:
 

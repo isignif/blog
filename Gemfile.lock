@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/madeindjs/tale
+  revision: ab6d7ee39be74b67e724190c2fabf6e54be8ab90
+  specs:
+    tale (0.1.6)
+      jekyll (>= 3.6)
+      jekyll-feed (~> 0.13.0)
+      jekyll-paginate (~> 1.1)
+      jekyll-seo-tag (~> 2.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -34,7 +44,7 @@ GEM
       terminal-table (~> 1.8)
     jekyll-autoprefixer (1.0.2)
       autoprefixer-rails (~> 9.3)
-    jekyll-feed (0.12.1)
+    jekyll-feed (0.13.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (2.0.0)
@@ -82,11 +92,11 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.0.0)
   jekyll-autoprefixer (~> 1.0)
-  jekyll-feed (~> 0.12)
   jekyll-paginate (~> 1.1)
   jekyll-seo-tag (~> 2.6)
   jekyll-sitemap
   redcarpet (~> 3.5)
+  tale!
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
