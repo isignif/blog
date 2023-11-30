@@ -1,10 +1,17 @@
-<nav class="nav">
-    <div class="nav-container">
-      <a href="{{ site.baseurl }}/">
-        <h2 class="nav-title">{{ site.title }}</h2>
-      </a>
-      <ul>
-        <li><a href="https://isignif.fr">Retourner sur isignif.fr</a></li>
+<header>
+  <div class="navbar navbar-light header px-4 py-3">
+    <div class="container">
+      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+      <ul class="navbar-nav">
+        <!--/ new act button not visible for bailiff
+          -->
+        <li class="nav-item ml-2">
+          <a class="nav-link btn btn-secondary text-white btn-main" href="https://isignif.fr"
+            >Retourner sur isignif.fr</a
+          >
+        </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</header>

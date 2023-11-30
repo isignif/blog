@@ -1,4 +1,36 @@
 ---
 layout: home
-title: Home
+title: Blog de iSignif
 ---
+
+<h1 style="display: none">{{ site.title }}</h1>
+
+<div>
+  {% for post in paginator.posts %}
+
+  <section class="mb-5">
+    <h2>{{ post.title }}</h2>
+    <p class="card-text"><small class="text-muted">{{ post.date | date: "%d/%m/%Y" }}</small></p>
+    <p class="card-text">{{ post.excerpt }}</p>
+    <a href="{{ post.url }}" class="btn btn-secondary">Voir l'article</a>
+  </section>
+  <hr class="my-5" />
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+    <li class="page-item"><a href="{{ paginator.previous_page_path }}" class="page-link">Précédent</a></li>
+    {% else %}
+    <li class="page-item"><span class="page-link">Précédent</span></li>
+    {% endif %}
+    <li class="page-item"><span class="page-link">Page: {{ paginator.page }} / {{ paginator.total_pages }}</span></li>
+    {% if paginator.next_page %}
+    <li class="page-item"><a href="{{ paginator.next_page_path }}" class="page-link">Suivant</a></li>
+    {% else %}
+    <li class="page-item"><span class="page-link">Suivant</span></li>
+    {% endif %}
+  </ul>
+</nav>
