@@ -32,18 +32,11 @@ url: "https://blog.isignif.fr" # the base hostname & protocol for your site, e.g
 #   auto_ids: true
 
 # Build settings
-theme: tale
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-autoprefixer
   - jekyll-paginate
-
-gems:
-  - tale
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-autoprefixer
 
 sass:
   sass_dir: _sass
@@ -51,6 +44,10 @@ sass:
 
 paginate: 10
 paginate_path: "/page/:num/"
+
+include:
+  - _redirects
+  - robots.txt
 
 # Exclude from processing.
 # The following items will not be processed, by default.
