@@ -1,31 +1,32 @@
 # === Redirections spécifiques ===
-/faq/    https://isignif.fr/faq    301
-/page/2/    https://isignif.fr/    301
-/page/3/    https://isignif.fr/    301
+# Le suffixe "!" force la redirection même quand un fichier statique existe à ce chemin.
+/faq/    https://isignif.fr/faq    301!
+/page/2/    https://isignif.fr/    301!
+/page/3/    https://isignif.fr/    301!
 
 # === Fiches pratiques → page des types d'actes ===
-/fiche_pratique/2019/09/01/activites-huissier-de-justice.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/huissier-de-justice-au-service-des-particulier.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/huissier-de-justice-en-entreprise.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/huissier-de-justice.html    https://isignif.fr/act_types    301
-/2019/09/01/huissier-sous-la-presidencia-macron.html    https://isignif.fr/act_types    301
-/2019/09/01/huissier-sous-la-presidence-macron.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/l-avenir-de-l-huissier-de-justice.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/l-huissier-de-justice-a-l-international.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/les-tarifs-huissier-de-justice.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/numerisation-monde-juridique.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/09/01/projets-de-la-chambre-europeenne.html    https://isignif.fr/act_types    301
-/2019/09/01/syllex.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/11/15/loi-societe-19-juillet-2019.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/11/16/extension-regime-simplifie.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/11/17/commisaire-compte-protection-donnees.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/01/justice-fr.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/03/devoir-conseil-acheteur.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/04/prescription-decennale.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/05/impossibilite-agir-prescription.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/10/dereferencement-donnees.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/11/exclusions-contrat-assurance.html    https://isignif.fr/act_types    301
-/fiche_pratique/2019/12/11/dsp2.html    https://isignif.fr/act_types    301
+/fiche_pratique/2019/09/01/activites-huissier-de-justice.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/huissier-de-justice-au-service-des-particulier.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/huissier-de-justice-en-entreprise.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/huissier-de-justice.html    https://isignif.fr/act_types    301!
+/2019/09/01/huissier-sous-la-presidencia-macron.html    https://isignif.fr/act_types    301!
+/2019/09/01/huissier-sous-la-presidence-macron.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/l-avenir-de-l-huissier-de-justice.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/l-huissier-de-justice-a-l-international.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/les-tarifs-huissier-de-justice.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/numerisation-monde-juridique.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/09/01/projets-de-la-chambre-europeenne.html    https://isignif.fr/act_types    301!
+/2019/09/01/syllex.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/11/15/loi-societe-19-juillet-2019.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/11/16/extension-regime-simplifie.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/11/17/commisaire-compte-protection-donnees.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/01/justice-fr.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/03/devoir-conseil-acheteur.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/04/prescription-decennale.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/05/impossibilite-agir-prescription.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/10/dereferencement-donnees.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/11/exclusions-contrat-assurance.html    https://isignif.fr/act_types    301!
+/fiche_pratique/2019/12/11/dsp2.html    https://isignif.fr/act_types    301!
 
 # === Catch-all : homepage ===
-/*    https://isignif.fr/    301
+/*    https://isignif.fr/    301!
